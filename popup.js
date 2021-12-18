@@ -3,6 +3,7 @@ let captureButton = document.getElementById('captureButton');
 
 captureButton.addEventListener('click', async() => {
     let [tab] = await chrome.tabs.query({ active: true, currentWindow: true});
+    // Get value from input box.
     var optioninput = document.getElementById('idNameSelector').value;
     chrome.scripting.executeScript({
         target: {tabId: tab.id},
@@ -10,12 +11,13 @@ captureButton.addEventListener('click', async() => {
         args: [optioninput],
     },
     (injectionResults) => {
+        // Populate codeDisplay element
         for (const frameResult of injectionResults)
             document.getElementById('codeDisplay').innerHTML = frameResult.result;
     });
 });
 
 function grabHTML(optioninput){
-// Optionselect will be either 1 or 0: 1 being an ID Call, and 0 Being a class name retrieval.
+//  Return grabbed element and contents inside
     return document.getElementById(optioninput).outerHTML;
 }
