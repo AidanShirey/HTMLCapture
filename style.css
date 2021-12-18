@@ -1,0 +1,50 @@
+#formatting {
+  display: flex;
+  flex-direction: column;
+}
+
+#captureButton {
+  background-color: #e44d26;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: #e44d26;
+}
+
+#captureButton:hover {
+  background-color: #f16529;
+  border: #f16529;
+}
+
+#codeFrame {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: lightgrey;
+}
+
+input {
+  border-radius: 10px;
+  border-color: lightgrey;
+  padding: 15px;
+  font-size: 18px;
+  background-color: lightgrey;
+}
+
+input:focus-visible {
+  outline-color: lightgrey;
+}
+
+::-webkit-input-placeholder {
+  color: black;
+}
+
+code {
+  color: black;
+}
+
+body {
+  background-color: grey;
+  color: whitesmoke;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
