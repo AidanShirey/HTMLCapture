@@ -30,6 +30,15 @@ input {
   background-color: lightgrey;
 }
 
+textarea {
+  background-color: lightgrey;
+  border-color: lightgrey;
+}
+
+textarea:focus-visible {
+  outline-color: lightgrey;
+}
+
 input:focus-visible {
   outline-color: lightgrey;
 }
